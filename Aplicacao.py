@@ -15,7 +15,7 @@ modelo = joblib.load('Modelo_Floresta_Aleatoria_v1.pkl')
 def Funcao_01( area, rooms, bathroom, parking_spaces, floor, animal, furniture, hoa, property_tax ):
     """ 
     Função pega os dados da url e faz as previsões
-    params = parâmetros passados na url
+    inputs = parâmetros passados na url
     modelo.predict(params)
     return o valor da previsão 
     """
