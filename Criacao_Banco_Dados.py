@@ -20,4 +20,13 @@ CREATE TABLE log_API(
 '''
 
 # Executando a Query
-cursor.execute( Query_criar_banco )
+# cursor.execute( Query_criar_banco )
+
+# Query de consulta
+
+Query_consulta = '''
+SELECT * FROM log_API
+'''
+
+# Executando a Query
+print(cursor.execute( Query_consulta ).fetchall())
