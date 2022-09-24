@@ -6,7 +6,7 @@ import joblib
 Aplicativo = Flask(__name__)
 
 # Carregar o modelo treinado
-modelo = joblib.load('Modelo_Floresta_Aleatoria_v1.pkl')
+modelo = joblib.load('modelo/Modelo_Floresta_Aleatoria_v1.pkl')
 
 # Função para receber nossa API
 @Aplicativo.route('/API_Preditivo/<area>;<rooms>;<bathroom>;<parking_spaces>;<floor>;<animal>;<furniture>;<hoa>;<property_tax>', methods=['GET'])
