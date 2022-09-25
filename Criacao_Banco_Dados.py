@@ -1,11 +1,8 @@
-import sqlite3
-
-# Criar o banco
-# Caso exista faz a conexao caso contrário ele cria
-conexao_banco = sqlite3.connect('Banco_dados_API.db')
+from conexao import Conecta_db as conexao
 
 # Apontar para o banco
-cursor = conexao_banco.cursor()
+con = conexao()
+cursor = con.conectando_db()
 
 # Query - Criar uma tabela
 
@@ -41,3 +38,5 @@ VALUES ('25;1;1;0;0;0;0;0;84', '01/01/2022 19:01', '01/01/2022', '00:01' )
 cursor.execute( Query_insert )
 
 # Commit para inserir as informações no banco de dados
+#con.conexao_banco.commit()
+cursor.close()
